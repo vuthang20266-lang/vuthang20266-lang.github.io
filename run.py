@@ -1,13 +1,9 @@
-from flask import Flask, render_template
+from appinit import create_app, db
 
-app = Flask(__name__)
+app = create_app()
 
-@app.route("/")
-def home():
-    return """
-    <h1>🔥 Web của Thắng đã hoạt động</h1>
-    <p>Hệ thống ProVip đang chạy 🚀</p>
-    """
+with app.app_context():
+    db.create_all()
 
 if __name__ == "__main__":
     app.run()
