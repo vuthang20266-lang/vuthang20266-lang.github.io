@@ -10,6 +10,9 @@ def create_app():
 
     db.init_app(app)
 
+    # import models sau khi db init
+    from appmodels import User
+
     from approutesauth import auth
     from approutesadmin import admin
 
