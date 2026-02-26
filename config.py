@@ -1,6 +1,4 @@
-import os
-
 class Config:
-    SECRET_KEY = "super_ultra_secret_key"
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SECRET_KEY = "supersecretkey"
+    SQLALCHEMY_DATABASE_URI = "sqlite:///database.db"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
