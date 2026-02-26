@@ -1,11 +1,7 @@
 from flask import Blueprint
 
-auth = Blueprint("auth", __name__)
+admin = Blueprint("admin", __name__, url_prefix="/admin")
 
-@auth.route("/")
-def home():
-    return "🔥 Trang chủ hoạt động"
-
-@auth.route("/login")
-def login():
-    return "🔐 Trang đăng nhập"
+@admin.route("/")
+def admin_home():
+    return "👑 Trang admin"
