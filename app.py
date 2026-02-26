@@ -7,10 +7,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(100))
-    password = db.Column(db.String(100))
+@app.route("/")
+def home():
+    return "Web của tao đã hoạt động 🚀"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
